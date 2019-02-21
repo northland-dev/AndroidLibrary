@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.northland.libhttp">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
+    <!--android P 有两处明显的优化-->
+    <!--1. http 明文不再支持-->
+    <!--2. apache http client 不再支持-->
+
+    <application
+            android:networkSecurityConfig="@xml/network_security_config">
+        <!--Android P -->
+        <!-- 继续支持 apache http client-->
+        <!--<uses-library android:name="org.apache.http.legacy" android:required="false" />-->
+    </application>
+</manifest>
